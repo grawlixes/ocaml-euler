@@ -1,5 +1,5 @@
 (
   executable
     (name main)
-    (libraries bignum core lib)
+    (libraries lib)
 )
