@@ -13,3 +13,7 @@ I use dune. To execute problem number <X>:
 `dune exec src/<X>/main.exe`
 
 This is a little bit cumbersome, so I'll find a way to make it more concise.
+
+[11/11] I made it more concise. You can use the script:
+
+`./run.sh <X>`
