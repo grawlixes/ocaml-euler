@@ -1,3 +1,10 @@
+(* Get length of list l *)
+let rec length = function
+    | []     -> 0
+    | _ :: t -> 1 + (length t)
+;;
+
+(* Maps array a according to function f, then flattens *)
 let map_and_flatten a f = List.flatten (List.map f a);;
 
 (* Generates a list [i, j) skipping by k *)
