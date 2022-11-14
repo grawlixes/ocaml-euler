@@ -1,3 +1,8 @@
+(* Convert a char's literal value to int (0-9) *)
+let char_to_int c = 
+    (Char.code c) - (Char.code '0')
+;;
+
 (* Get length of list l *)
 let rec length = function
     | []     -> 0
@@ -5,7 +10,9 @@ let rec length = function
 ;;
 
 (* Maps array a according to function f, then flattens *)
-let map_and_flatten a f = List.flatten (List.map f a);;
+let map_and_flatten a f = 
+    List.flatten (List.map f a)
+;;
 
 (* Generates a list [i, j) skipping by k *)
 let range i j k =
