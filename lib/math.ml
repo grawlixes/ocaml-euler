@@ -33,3 +33,21 @@ let divisors l =
     in
      aux [] ((Int.of_float (Float.sqrt limit)))
 ;;
+
+(* Generates all prime numbers up to n with sieve *)
+let primes_up_to n =
+    let primes = Array.make (n+1) true in
+    let rec mark p i =
+        if (i <= n) then (
+            primes.(i) <- false;
+            mark p (i + p)
+        )
+    in
+    primes.(0) <- false;
+    primes.(1) <- false;
+    for i = 2 to n do
+        if (primes.(i)) then
+            mark i (2*i);
+    done;
+    primes
+;;
