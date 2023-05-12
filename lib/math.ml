@@ -1,3 +1,5 @@
+open Core;;
+
 (* Returns x^a *)
 let rec pow a = function
   | 0 -> 1
@@ -36,7 +38,7 @@ let divisors l =
 
 (* Generates all prime numbers up to n with sieve *)
 let primes_up_to n =
-    let primes = Array.make (n+1) true in
+    let primes = Array.create ~len:(n+1) true in
     let rec mark p i =
         if (i <= n) then (
             primes.(i) <- false;
