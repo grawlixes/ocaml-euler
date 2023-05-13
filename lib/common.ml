@@ -68,3 +68,8 @@ let read_matrix path delim f =
         )
         |> Array.of_list
 ;;
+
+(* Returns the sum of an integer list *)
+let int_list_sum = 
+    List.fold_left ~init:0 ~f:(fun acc x -> acc + x)
+;;
