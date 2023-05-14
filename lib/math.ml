@@ -9,6 +9,12 @@ let rec pow a = function
     b * b * (if n mod 2 = 0 then 1 else a)
 ;;
 
+(* Returns N! *)
+let rec factorial n =
+    if (n = 0) then 1
+    else n * (factorial (n - 1))
+;;
+
 (* Greatest common divisor of A and B *)
 let rec gcd a b =
     if (b = 0) then a
